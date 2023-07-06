@@ -1,28 +1,25 @@
-<a href="https://precedent.dev">
-  <img alt="Precedent – Building blocks for your Next project" src="https://precedent.dev/opengraph-image">
-  <h1 align="center">Precedent</h1>
-</a>
+#### NextJs Starter forked from: 
+https://github.com/steven-tey/precedent
 
-<p align="center">
-  Building blocks for your Next project
-</p>
+## Nextjs Starter Setup:
+Run Postgres docker container
+- `docker run --name svelte-dash-db -p 5432:5432 -e POSTGRES_PASSWORD=p0stgr3s -d postgres`
+- Note: need to use: `host.docker.internal` as host when referencing container
 
-<p align="center">
-  <a href="https://twitter.com/steventey">
-    <img src="https://img.shields.io/twitter/follow/steventey?style=flat&label=steventey&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
-  </a>
-  <a href="https://github.com/steven-tey/precedent">
-    <img src="https://img.shields.io/github/stars/steven-tey/precedent?label=steven-tey%2Fprecedent" alt="Precedent repo star count" />
-  </a>
-</p>
+Setup Directory
+`pnpm i`
 
-<p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#one-click-deploy"><strong>One-click Deploy</strong></a> ·
-  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
-  <a href="#author"><strong>Author</strong></a>
-</p>
-<br/>
+Prisma Init  
+-> `npx prisma generate`  
+-> `npx prisma migrate dev --preview-feature`
+
+Create and Configure environment variables  
+` cp .env.example .env`
+
+Run App in dev move  
+`pnpm dev`  
+- Note: may change port in package.json if running in container
+
 
 ## Introduction
 
